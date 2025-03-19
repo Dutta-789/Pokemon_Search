@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --ff: "Roboto Condensed", sans-serif;    
+    --tt: bold var(--ff);
+    --btncolor: yellow;
+}
+*{
+    padding:0;
+    margin:0;
+    font-family: var(--ff);   
+
+}
+
+body{
+    background: rgb(129,150,255);
+    background: linear-gradient(90deg, rgba(129,150,255,1) 0%, rgba(23,88,237,1) 53%, rgba(50,238,246,1) 100%);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.wrapper{
+    background-color: white;
+    text-align: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+    min-width: 100vh;
+    min-height: 70vh;
+    border-radius: 2rem;
+    border: solid black;
+    border-width: 2px;
+    background-image: url('./assets/cartoon-landscape-with-white-clouds-on-sky-background-with-cloud-and-beautiful-field-summer-green-country-hill-meadow-scene-spring-nature-land-illustration-vector.jpg'); /* Set background image */
+     background-size: cover; /* Scale image to cover the div */
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+.msg{
+    background-color:  rgb(205, 205, 205);
+    height: 3rem;
+    width: 100vh;
+    padding:1vh;
+    border-radius: 1rem;
+    border: solid black;
+    font-size:1rem;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds "..." when text overflows */
+    white-space: nowrap;
+}
+
+#heading{
+    max-width:70vh;
+}
+.input_wrapper{
+    margin-top: 1rem;
+    margin-bottom:1rem;
+    display: flex;
+    gap:1rem;
+    justify-content: center;
+    align-items: center;   
+}
+
+
+#input_container{
+    height: 2rem;
+    min-width: 40vh;
+    padding-left:1vh;    
+    border: solid black;
+    outline:none;
+    border-radius: 5px;
+}
+#searchBtn{
+    height: 2rem;
+    width:4rem;
+    border: solid black;
+    border-radius: 7px;
+    background-color: var(--btncolor);
+    font-weight: bold;
+}
+#searchBtn:hover{
+    transition: 1s;
+    background-color: rgb(248, 168, 39);
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
+    cursor:pointer;    
+}
+#searchBtn:active{
+    transition: 0.3s;
+    background-color: rgb(245, 99, 31);    
+    cursor:wait;  
+}
+#poke_pic{
+    filter: blur(0px);
+     transition: filter 0.5s;
+    max-height: 35vh;
+    min-height: 30vh;
+    max-width: 35vh;
+    min-width: 30vh;
+    
+    display:block;
+}
+.img_container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color:aquamarine;
+    min-height: 35vh;
+    width: 100vh;
+    border: solid black;
+    border-radius: 2rem;
+    background-image: url('./assets/393ce636c6ceac0b15ad4c454f247d60.jpg'); /* Set background image */
+    background-size: cover; /* Scale image to cover the div */
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+.name {
+    font-size: larger;
+}
+
+
+

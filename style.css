@@ -10,7 +10,7 @@
     padding:0;
     margin:0;
     font-family: var(--ff);   
-
+    box-sizing: border-box;
 }
 
 body{
@@ -28,8 +28,8 @@ body{
     padding-left: 3rem;
     padding-right: 3rem;
     padding-bottom: 3rem;
-    min-width: 100vh;
-    min-height: 70vh;
+    /* min-width: 100vh;
+    min-height: 70vh; */
     border-radius: 2rem;
     border: solid black;
     border-width: 2px;
@@ -40,41 +40,58 @@ body{
 }
 .msg{
     background-color:  rgb(205, 205, 205);
-    height: 3rem;
+
     width: 100vh;
     padding:1vh;
     border-radius: 1rem;
     border: solid black;
     font-size:1rem;
-    overflow: hidden;
-    text-overflow: ellipsis; /* Adds "..." when text overflows */
-    white-space: nowrap;
+    
+    white-space: normal; /* Allows text wrapping */
+    word-wrap: break-word; /* Breaks long words */
+    text-align: center; /* Centers text properly */
+
+    min-height: 60px;
+    padding: 10px;
+    overflow: hidden; /* Prevents scrolling inside */
+    display: flex;
+    align-items: center;
 }
 
 #heading{
     max-width:70vh;
 }
 .input_wrapper{
-    margin-top: 1rem;
-    margin-bottom:1rem;
+    /* margin-top: 1rem;
+    margin-bottom:1rem;*/
+   
+    
+    
+    
+   
     display: flex;
-    gap:1rem;
-    justify-content: center;
-    align-items: center;   
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically (if needed) */
+    gap: 10px; /* Adds spacing between input and button */
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container itself */
 }
 
 
 #input_container{
-    height: 2rem;
-    min-width: 40vh;
-    padding-left:1vh;    
+    
+    height: 45px;
+    width: 80%;
+    padding-left:1vh; 
+    margin: 10px 0;   
     border: solid black;
     outline:none;
     border-radius: 5px;
 }
 #searchBtn{
-    height: 2rem;
-    width:4rem;
+    height: 45px;
+    width:20%;
     border: solid black;
     border-radius: 7px;
     background-color: var(--btncolor);
@@ -121,5 +138,23 @@ body{
     font-size: larger;
 }
 
+@media (max-width: 750px) {
+    .wrapper {
+        width: 90%;
+        padding: 15px;
+    }
 
-
+    input, button {
+        width: 100%;
+    }
+    .msg , .img_container{
+        width:100%;
+    }
+    #heading{
+        width: 80%;
+    }
+    .input_wrapper{
+        width:80%;
+    }
+    
+}
